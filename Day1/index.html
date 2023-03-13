@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+</head>
+<body>
+    <!-- 
+        JavScrpit link on HTML
+        -Internal
+        -External
+
+
+        Normal rule;
+        -CSS loads itself first and HTML-Dom will work searching own class or id names on css so, CSS will be typed on head of HTML document.
+        -HTML-Document should be loaded as a DOM, because, JavaScript works with DOM always not directly with source code. So, JS will be types on footer majorly.
+        
+        Note: We always use our custom scripts and addon libraries on footer.
+            
+            Reason:-
+
+            HTML-DOM searches for CSS, JS searches for HTML-DOM. So, understanding DOM hirerarchy loading mechanics, we should use CSS and JS on head or footer of Document.
+    -->
+
+    <!--External-->
+    <script src="script.js" type="text/javascript"></script>
+    <!--Internal-->
+    <script type="text/javascript">
+        //Statement
+        // coding:
+        // - Loosely typed(i.e. JavScript)
+        // - Strictly typed(i.e. C) 
+        "use strict";
+        document.write("<h1>Hello first JS</h1>");
+        // It shows data on browser window inside your mentioned HMTL-DOM Struture
+        console.log("Hi, JS");
+        /*
+        Inspect browser window (It shows developer tool ) > to console
+        So, to print data on web-browser with JS:
+        - document; (document.write)
+        - console; (console.log, console.table)
+
+        JS Popup boxes:
+        - alert(); To check/alert status of data
+        - confirm(); To confirm data logic or print (ok/cancel)
+        - prompt(); To ask for user input 
+        
+        */
+
+        var a = 10, b = 5;
+        var name = prompt("Enter your name: ");
+        alert("Your name is " + name);
+        alert(a+b + " Calculated value!"); //alert(); doesn't accept multiple arguments
+        console.log(a+b, "Calculated value!");
+        var conf = confirm("Data calculation done!");
+        
+        if (conf) {
+            document.write("Accepted");
+        }else{
+            document.write("Denied");
+        }
+
+    </script>
+
+</body>
+</html>
