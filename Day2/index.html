@@ -11,11 +11,59 @@
         /*
         WAP to calculate two numbers taking data from user.
         */
-       var n1 = Number(prompt("Enter n1: ")), n2 = Number(prompt("Enter n2: "));
+        //var n1 = Number(prompt("Enter n1: ")), n2 = Number(prompt("Enter n2: "));
 
-       var calc = n1 + n2;
+        var n1 = parseInt(prompt("Enter n1: ")), n2 = parseInt(prompt("Enter n2: ")); 
+
+        var calc = n1 + n2;
 
        alert("The sum of n1 and n2 is : " + calc);
+       
+       /*
+       Data Type:
+        - Primitive (int, float, boolean, character)
+        - Non-Primitive (object, array)
+        - Trivial Type: 
+
+        Note: decleration - dynamic typing (data type interpretation on run-time, not on compile time like C Programming)
+       
+        Declaration:
+        ES5: var keyword
+        ES6: added let and const
+
+        var     - Re-Declare & Re-Define possible 
+        let     - Re-Declare is not possible, but Re-Define is possible
+        const   - Re-Declare and Re-Define not possible
+        */
+
+        //Declare (Assigning name (identifier))
+        var a;
+
+        //Define (Assigning Value)
+        a = 10;
+
+        /*
+            Example
+        */
+        //Declare and Define itself
+        var a = 10;
+        a = 20; //Re-Define possible
+
+        var a = 5; //Re-Declare is possible
+
+        let b = 10;
+        b = 20; //Re-Define possible
+
+        // let b = 5; //Re-Declare not possible (error)
+
+        const c = 10;
+        // c = 20; //Re-Define not possible (error)
+
+        // const c = 5; //Re-Declare not possible (error)
+
+        // const d;
+        // d = 10; //This is also redefined so, it says, declare and define at once while creating const variable
+
     </script>
 </body>
 </html>
