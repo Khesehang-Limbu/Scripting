@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String (Literal)</title>
+</head>
+<body>
+    <script>
+        function calcNum(n1, n2, op){
+            let calc = eval(`${n1} ${op} ${n2}`);
+            // let calc = n1 `${op}` n2;// This is wrong as the linter cannot separate code from literals
+            //String literals ease this process of claculation, by interpreting js code
+            // switch (op) {
+            //     case '+':
+            //         calc = n1 + n2;
+            //         break;
+            //     case '-':
+            //         calc = n1 - n2;
+            //         break;
+            //     case '*':
+            //         calc = n1 * n2;
+            //         break;
+            //     case '/':
+            //         calc = n1 / n2;
+            //         break;
+            //     default:
+            //         break;
+            // }
+            document.write(calc)
+        }
+
+        // let a = Number(prompt("Enter a : "))
+        // let b = Number(prompt("Enter b : "))
+        // let op = prompt("Enter operator : ")
+
+        // calcNum(a, b, op);
+        //Prototype uses properties and method() using dot(.) operator
+        let arr = ["YourName", 9863784674, 2023]
+        let arr1 = ["myName", ]
+        arr.forEach(item=>{
+            document.write(item + "<br\>");
+        });
+        console.log(arr.length);
+        console.log(Array());
+    </script>
+</body>
+</html>
