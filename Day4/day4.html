@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#" method="post" name="form_name">
+        <div class="field-group">
+            <input type="hidden" name="pName" id="pName" value="Package" />
+        </div>
+
+        <div class="field-group">
+            <label for="fName">Full Name : </label>
+            <input type="text" id="fName" name="fName" value="" placeholder="Ex: Khesehang Yonghang" onchange="this.form.submit"/>
+            <span></span>
+        </div>
+    </form>
+    <!--
+        JS (Implementation) Types
+        - Inline JS handler
+        - Internal JS
+        - External JS
+    -->
+    <script type="text/javascript">
+        const fName = document.getElementById("fName");
+        const names = document.getElementsByTagName("input");
+
+        //It retrieves a single/unique element
+        fName.addEventListener("keyup", function () {
+            if (fName.value.length < 4) {
+                this.nextElementSibling.innerHTML = "Not enough characters!";
+                this.nextElementSibling.classList.add("error");
+            }
+            else{
+                this.nextElementSibling.innerHTML = "";
+            }
+        });
+
+
+        // console.log(names.pName.value);
+    </script>
+</body>
+
+</html>
