@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events and Styles</title>
+</head>
+<body>
+    <div class="info-box">
+        <h1 style="color:green" class="heading">Title Text</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+    </div>
+
+    <!-- Loading Chain -->
+    <!-- HTML DOM searches for styles -->
+    <!-- JavaScript searches for HTML DOM-->
+
+    <script>
+        //TO avoid render-blocking
+        /*We use scripts on footer*/
+        let gender;
+        gender = "F";
+        gender = "M";
+
+        document.write(`gender : ${gender}`);
+        var infoBox = document.getElementsByClassName("info-box")[0].setAttribute("style", "width:100px; color: red;"); 
+        console.log(infoBox);
+        infoBox[0].style.backgroundColor = "cyan";
+
+        let heading = document.querySelector(".heading");
+        heading.setAttribute("style", "color:red");
+    </script>
+</body>
+</html>

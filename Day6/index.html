@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6</title>
+</head>
+<body>
+    <h1>Working with HTML DOM basic</h1>
+    <p>DOM elements : Typography, form, structure/layouy, etc.</p>
+    <h2>Working with Form</h2>
+
+    <form action="" method="post" name="form">
+        <div class="field-group">
+            <label for="fName">Full Name : </label>
+            <input type="text" name="fName" id="fName" />
+            <span class="error" value="" name="error"></span>
+        </div>
+        <div class="field-group">
+            <label for="email">Email : </label>
+            <input type="text" name="email" id="email" />
+            <span class="error" value="" name="error"></span>
+        </div>
+        <button type="submit" name="submit" value="1">Submit</button>
+    </form>
+
+    <script>
+        let formSubmit = document.form;
+        let submit = document.form.submit;
+        let fName = document.form.fName;
+        let email = document.form.email;
+
+
+        fName.addEventListener("keypress", (evt)=>{
+            // evt.preventDefault();
+            if (fName.value.length < 10){ 
+                fName.nextElementSibling.innerHTML = "</br>Invalid full name";
+            }else{
+                fName.nextElementSibling.innerHTML = "";
+            }
+        });
+
+
+        console.log(submit);
+        form.addEventListener("submit", (evt)=>{
+            evt.preventDefault();
+            if (email.value.length < 10){ 
+                email.nextElementSibling.innerHTML = "</br>Email can't be empty";
+                email.nextElementSibling.style.color = "red";
+            }else{
+                email.nextElementSibling.innerHTML = "";
+            }
+        });
+        // console.log(formSubmit);
+    </script>
+</body>
+</html>
