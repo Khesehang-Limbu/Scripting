@@ -1,0 +1,16 @@
+First :
+    - Chessboard
+    - Contact form validation
+
+    Personal Information
+    (fullname, email, gender, address)
+
+    Your Message Area
+    (Services combobox, Subject, Message, File)
+
+    Note:
+    -use fieldset to group main areas
+    - dropdown with section (optgroup)
+
+    i.e. Educational and Techincal services
+

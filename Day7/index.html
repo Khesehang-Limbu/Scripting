@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph of Change Background Color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Q1. Write Client-Side Script to change background color of a paragraph on button click. -->
+    <p name="paragraph" class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium nobis iusto quidem, consectetur repellendus autem iure reprehenderit, minima vitae dolorem sint sequi pariatur explicabo? Molestias ut fugiat voluptates quo laboriosam.</p>
+    <button type="button" name="btn" id="btn">Change Background</button>
+    <button type="button" name="btn" id="remove">Remove Background</button>
+    <button type="button" name="hide" id="hide">Hide Paragraph</button>
+    <button type="button" name="show" id="show">Show Paragraph</button>
+
+    <input type="text" name="form-field" class="form-field"/>
+
+    
+    <!-- Q2.  -->
+    <script>
+        const paragraph = document.getElementsByClassName("paragraph")[0];
+        const button = document.getElementById("btn");
+        const hide = document.getElementById("hide");
+        const show = document.getElementById("show");
+        const remove = document.getElementById("remove");
+        const inputField = document.getElementsByClassName("form-field")[0];
+
+        button.addEventListener("click", (event)=>{
+            paragraph.classList.add("p-style"); 
+        });
+
+        hide.addEventListener("click", function(event){
+            paragraph.style.display = "none";
+        });
+
+        show.addEventListener("click", function(event){
+            paragraph.style.display = "block";
+        });
+
+        remove.addEventListener("click", function(){
+            paragraph.classList.remove("p-style");
+        });
+
+        inputField.addEventListener("keyup", function(event){
+            if (event.target.value.length <= 4){
+                this.classList.add("notEligible");
+            }else {
+                event.target.classList.remove("notEligible");
+            }
+        });
+    </script>
+</body>
+</html>

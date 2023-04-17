@@ -1,0 +1,41 @@
+* {
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blue;
+}
+
+.p-style {
+    background-color: red;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.chess-cell {
+    height: 20px;
+    width: 20px;
+}
+
+.column {
+    height: 400px;
+    width: 400px;
+}
+
+.notEligible {
+    outline-color: red;
+    border-color: red;
+}
+
+.eligible {
+    outline-color: black;
+    border-color: black;
+}
