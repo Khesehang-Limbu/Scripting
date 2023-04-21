@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+fieldset {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-color: rgba(192, 192, 192, 0.5);
+    border-color: #fff;
+}
+
+body {
+    background-color: #F0F0F0;
+}
+
+label {
+    font-weight: 500;
+}
+
+legend {
+    opacity: 0.5;
+}
+
+.header-section {
+    margin-bottom: 10px;
+}
+
+.header-section p {
+    opacity: 0.5;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 2vw auto;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-field,
+.form-radio {
+    margin-bottom: 10px;
+}
+
+.form-field input,
+select,
+textarea {
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+}
+
+
+#message {
+    height: 100px;
+}
+
+.radio-group {
+    width: 100%;
+    height: 30px;
+    padding: none;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+
+.btn {
+    padding: 10px;
+    color: #fff;
+    border-radius: 3px;
+    border-style: none;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+.btn:hover{
+    border-radius: 0;
+    background-color: white;
+    outline: 1px solid black;
+}
+
+.btn-send {
+    background-color: green;
+}
+
+.btn-send:hover{
+    color: green;
+}
+
+.btn-reset {
+    background-color: red;
+}
+
+.btn-reset:hover {
+    color: red;
+}
+
+.error {
+    color: red;
+}
+
+.error-outline {
+    outline: 1px solid red;
+    border-style: none;
+}
+
+.success-outline {
+    outline: 1px solid green;
+    border-style: none;
+}
