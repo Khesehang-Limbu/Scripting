@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+</head>
+<body>
+    <!-- Note
+    - JavaScript has Array() and Object() majorilyto handle bolcks of codes/scripts
+    - WIndow object is nown known as global having propery and methods().
+    - JS works with DOM
+    - Som JS is known as object based scripting.    
+-->
+    <div class="demo" id="demo"></div>
+    <button id="open">Visit Technician</button>
+    <a href="https://yubarajrai.name.np" title="Visit Developer">Visit Developer</a>
+    <button id="close">Close Window</button>
+
+    <script type="text/javascript">
+        // Using Wondow propery i.e: alert() or window.alert();
+        // console.log(window.alert("Your Name"));
+        console.log(window);
+        // document.write(custonName);
+
+        // Add property to window object
+        window.custonName = "Your Name";
+
+        window.customMethod = () => {
+            return "Hello World";
+        };
+
+        console.log(customMethod());
+        document.write(custonName);
+
+        console.log(window);
+
+        const strData = "Password";
+        // const numData = 123456789;
+        
+        // We can achieve encryption using ato but it isn't preferred, btoa() is for encoding and atob() for decoding
+        // fullforms for atob() is ASCII to Binary and btoa() is Binary to ASCII
+        const encodedData = btoa(strData);
+        document.write(`<br/> ${encodedData}`);
+
+        const decodedData = atob(encodedData);
+        document.write(`<br/> ${decodedData}`);
+
+        //atob() or btoa() can only encode or decode base-64 String not numbers
+        // const encodedNumData = btoa(numData);
+        // document.write(`<br/> ${encodedNumData}`);
+
+        // const decodedNumData = atob(numData);
+        // document.write(`<br/> ${decodedNumData}`);
+
+        console.log(encodedData);
+
+        // mouse event and window object
+
+        const link = document.getElementsByTagName("a")[0];
+        const openButton = document.getElementById("open");
+        openButton.addEventListener("click", function(){
+            window.open(link.href);
+        });
+
+        const closeButton = document.getElementById("close");
+
+        closeButton.addEventListener("click", function(){
+            window.close();
+        });
+    </script>
+</body>
+</html>

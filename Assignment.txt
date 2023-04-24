@@ -14,3 +14,8 @@ First :
 
     i.e. Educational and Techincal services
 
+Second:
+- Filter prime and composite numbers from an array using client-side script
+- Design and Make a functional calculator
+- create custom method on window object
+- Check built-in feature animation
