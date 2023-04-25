@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 340px;
+    height: auto;
+    margin: 50px auto;
+    line-height: 2;
+}
+
+.encryption {
+    margin-top: 25px;
+}
+
+.form-field > * {
+    width: 100%;
+    height: 30px;
+}
+
+.form-field input {
+    padding: 0 5px;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid black;
+}
+
+.form-field label {
+    font-size: 1.5rem;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.btn-encode {
+    color: white;
+    background-color: blue;
+    border-color: blue;
+}
+
+.btn-decode {
+    color: white;
+    background-color: green;
+    border-color: green;
+}
+
+.btn:hover{
+    color: black;
+    background-color: white;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
