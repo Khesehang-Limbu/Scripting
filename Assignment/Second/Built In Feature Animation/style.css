@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212A3E;
+}
+#container {
+    height: 600px;
+    width: 600px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.bubble {
+    background-color: #F1F6F9;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute; 
+    transform: translate(-50%, -50%); 
+}
+

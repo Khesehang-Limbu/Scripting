@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    padding: 10px;
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn-start{
+    background-color: green;
+    border: 1px solid green;
+}
+
+.btn-stop {
+    background-color: red;
+    border: 1px solid red;
+}
+
+.btn-group {
+    text-align: center;
+}
+
+#container,
+#containe-manual {
+    width: 600px;
+    height: auto;
+    margin: 50px auto;
+    line-height: 2;
+}
+
+#display-time,
+#display-time-manual {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+}

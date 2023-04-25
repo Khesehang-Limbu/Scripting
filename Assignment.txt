@@ -19,3 +19,9 @@ Second:
 - Design and Make a functional calculator
 - create custom method on window object
 - Check built-in feature animation
+- Task : create digital clock with date and time in 12 hours format: 
+- Month in string
+- Day in string
+- Add AM and PM
+
+Note : if we use Date.getDate() or other mothods from Date, it will take the index from array index.
