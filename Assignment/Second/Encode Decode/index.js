@@ -9,6 +9,7 @@ let decodedText = "";
 btns.forEach(btn => {
     btn.addEventListener("click", function(event){
         const {name} = event.target;
+        
         const value = password.value;
 
         if (name === "encode"){

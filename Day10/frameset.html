@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frameset</title>
+
+    <!-- async  -->
+    <script>
+      //   let stateCheck = setInterval(() => {
+      //     if (document.readyState === "complete") {
+      //       clearInterval(stateCheck);
+      //       // document ready
+      //       const mainFrame = document.getElementById("mainFrame");
+      //       console.log(mainFrame);
+      //       const frames = window.frames;
+
+      //       for (let i = 0; i < frames.length; i++) {
+      //         console.log(frames[i]);
+      //         frames[i].document.body.style.background = "red";
+      //       }
+      //     }
+      //   }, 100);
+
+      function changeBg() {
+        const frames = window.frames;
+
+        for (let i = 0; i < frames.length; i++) {
+          frames[i].document.body.style.background = "red";
+        }
+      }
+
+      // async function load(){
+      //     const frame = await window.frames["frame1"];
+
+      //     // console.log(frames);
+      //     // console.log(frames[0].document.body.childNodes[1].style.color = "red");
+      //     // console.log(frameElem);
+      //     return frame;
+      // }
+
+      // const frames = load().then(f => {
+      //     console.log(f);
+      //     // console.log(f.frames.document.childNodes[1].childNodes[1]);
+      // });
+      // console.log(frames);
+      // console.log(frame);
+      // console.log(frame2);
+    </script>
+
+    <!-- onload="load() -->
+    <frameset cols="60%, 40%" name="parent-frame" id="mainFrame" onload="changeBg()">
+      <frame name="frame1" id="frame1" src="./frame1.html" />
+      <frame name="frame2" id="frame2" src="./frame2.html" />
+    </frameset>
+  </head>
+</html>

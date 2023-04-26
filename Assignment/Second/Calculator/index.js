@@ -39,6 +39,7 @@ numbers.forEach((item, index) => {
                 operation = operands.innerHTML = operationArray.join('');
         }else if (clickedItem === "="){
             total = eval(operation);
+
             if (!Number.isInteger(total)){
                 total = total.toFixed(6);
             }
