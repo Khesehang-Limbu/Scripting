@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Standard</title>
+    <style>
+        form{
+            max-width: 400px;
+            margin: 0 auto;
+            border: 3px solid purple;
+            padding: 30px;
+            box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        input,
+        textarea {
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            width:100%;
+            height: 38px;
+            padding: 6px;
+        }
+
+        .form-field {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        button {
+            background-color: purple;
+            border: 0;
+            padding: 12px 36px;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: blueviolet;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" metthod="POST" name="form_data" novalidate>
+        <div class="form-field">
+            <label for="fname">Full Name : </label>
+            <input id="fname" type="text" name="fname" value="">
+        </div>
+        <div class="form-field">
+            <label for="username">Username : </label>
+            <input id="username" type="text" name="username" value="">
+        </div>
+        <div class="form-field">
+            <label for="pwd">Password : </label>
+            <input id="pwd" type="password" name="pwd" value="">
+        </div>
+        <div class="form-field">
+            <label for="cpwd">Confirm Password : </label>
+            <input id="cpwd" type="password" name="cpwd" value="">
+        </div>
+        <div class="form-field">
+            <label for="email">Email: </label>
+            <input id="email" type="email" name="email" value="" required>
+        </div>
+        <div class="form-field">
+            <label for="phone">Phone : </label>
+            <input id="phone" type="tel" name="phone" value="">
+        </div>
+        <div class="form-field">
+            <label for="message">Message : </label>
+            <textarea id="message" name="message" value="" rows="30" cols="12">
+
+            </textarea>
+        </div>
+
+        <div class="form-field">
+            <button type="submit" name="send">Send Message</button>
+        </div>
+        
+    </form>
+
+    <script>
+        const formChildren = Array.from(document.forms);
+        const form = document.form_data;
+
+        function insertAfter(newNode, existingNode) {
+            existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+        }
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            formChildren.forEach(element => {
+                if (element.name != "send"){
+                    const span = document.createElement("span");
+                    span.classList.add("error");
+                    // span.innerHTML = "Error";
+                    insertAfter(span, element);
+
+                    if (event.value === ""){
+                        console.log(element);
+                        element.nextElementSibling.innerHTML = "Field cannot be empty";
+                    }else {
+                        element.nextElementSibling.innerHTML = "";
+                    }
+
+                    element.addEventListener("keyup", function(event){
+                        if (event.target.value.length < 5){
+                            element.nextElementSibling.innerHTML = "Insufficient Characters!";
+                            if (/\s/g.test(event.target.value) == "false"){
+                                element.nextElementSibling.innerHTML = "Invalid!";
+                                console.log(invalid);
+                            }
+                        }else{
+                            element.nextElementSibling.innerHTML = "";
+                        }
+                    })
+                }
+            });
+        });
+
+        // username.addEventListener("keyup", (event) => {
+        //     console.log(event.target.value);
+        //     if (event.target.value.match(/^/d*/w*/g)){
+        //         console.log("Correct");
+        //     }
+        // })
+    </script>
+</body>
+</html>

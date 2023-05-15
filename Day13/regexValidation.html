@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex Validation for Client Side Title</title>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <form action="#" method="post" name="contact_form">
+      <div class="form-field">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+      </div>
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" />
+      </div>
+      <div class="form-field">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      const userName = document.getElementById("username");
+      const email = document.getElementById("email");
+
+      const form = document.forms[0];
+      console.log(userName);
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const formChildren = event.target.children;
+        Array.from(formChildren).forEach((child) => {
+          const grandChild = child.children[1];
+          const grandChildValue = grandChild.value;
+          console.log(grandChildValue);
+
+          if (grandChildValue == "") {
+            const error = document.createElement("span");
+            error.innerHTML = "Username cannot be empty";
+            child.appendChild(error);
+            setTimeout(() => {
+              error.innerHTML = "";
+            }, 3000);
+
+            console.log(grandChild.value);
+
+            if (
+              (grandChild.name ==
+                "username" && !grandChildValue.match("/[a-z]*[0-9]*/"))
+            ) {
+              const error = document.createElement("span");
+              error.innerHTML = "Username Cannot contain spaces";
+              child.appendChild(error);
+
+              setTimeout(() => {
+                error.innerHTML = "";
+              }, 3000);
+            }
+          }
+        });
+        // if (userName.value == ""){
+        //     const error = document.createElement("span");
+        //     error.innerHTML = "Username cannot be empty";
+        //     userName.parentNode.appendChild(error);
+        //     setTimeout(() => {
+        //         error.innerHTML = "";
+        //     }, 3000);
+        // }
+      });
+    </script>
+  </body>
+</html>

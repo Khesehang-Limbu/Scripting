@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log(String.prototype);
+    let myText = "Hello This Is Padmashree, Hello To You";
+
+    let searchedText = myText.search("[Y][a-z]");
+    // searchedText = myText.indexOf("[Y][a-z]");
+    // document.write(searchedText);
+    document.write(myText);
+    const textList = myText.split(" ");
+
+    const newTextList = textList.map(text => {
+        if (text === "Hello"){
+            return text = "Hi";
+        }
+        return text;
+    });
+    
+    newTextList.join();
+    // console.log(typeof(newTextList.toString()));
+    document.write(`<hr/> ${newTextList.join().replaceAll("," , " ")}`);
+
+    // With Regulat Expression
+    regEx = /Hello/g;
+
+    document.write(`<hr/><strong>${myText.replace(regEx, "Hi")}</strong>`);
+</script>
+</html>

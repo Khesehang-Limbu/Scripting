@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        iframe{
+            width: 49%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="frame1" src="./frame1.html" frameborder="0"></iframe>
+    <iframe id="frame1" src="./frame2.html" frameborder="0"></iframe>
+
+    <script type="text/javascript">
+        //Event and Statements
+        const frames = window.frames;
+        // console.log(frames[0].document.body.childNodes[1].style.color="red");
+
+        window.addEventListener("load", function(){
+            for(i=0; i<frames.length; i++){
+                console.log(frames[i].document.body.childNodes[1].style.color="blue");
+            }
+            let frameFile = window.frames;
+            console.log(frameFile[1].document.body.childNodes[1].style.color="pink");
+            frameFile[0].document.body.childNodes[1].innerHTML="<em>Karuna<em/>";
+        });
+
+        // 2. standard method
+
+        
+    </script>
+</body>
+</html>

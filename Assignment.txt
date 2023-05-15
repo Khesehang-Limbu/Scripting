@@ -25,3 +25,8 @@ Second:
 - Add AM and PM
 
 Note : if we use Date.getDate() or other mothods from Date, it will take the index from array index.
+
+Third:
+- Task: Validate number in epression of value as optional
+- Task: Validate email using regex.
+- Task: Validate password using regex.~

@@ -2,9 +2,11 @@
 // Note: Since frame and iframe elements neeed to load onto a page through network, so they need to be loaded completely to access them and make changes via JS.
 
 let cFrames = window.frames;
+const frame2 = document.getElementById("frame2");
 const frame1 = document.getElementById("frame1");
 
-console.log(frame1.contentDocument);
+console.log(frame2.contentDocument.body.style.backgroundColor = "blue");
+
 frame1.onload = function () {
     const frameBody =  frame1.contentDocument.body;
     console.log(frameBody.style.backgroundColor = "red");
